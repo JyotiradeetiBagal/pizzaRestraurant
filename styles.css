@@ -1,0 +1,259 @@
+
+@font-face {
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 400;
+    src: url(res/RudaFont-family/k3kKo8YQJOpFgHQ1mQ5VkEbUKaJFsh_90qmiGg.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Ruda';
+}
+body {
+    padding-top: 80px; /* Adjust based on your header height */
+    color: white;
+    background-color: black;
+}
+.link-container{
+    margin:80px;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+}
+
+.navbar-link{
+    display: block;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-link li{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: white;
+}
+
+
+.hamburger {
+    display: none; 
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+
+.main-container {
+    background-image: url('res/images/pizza1 1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100%;
+    padding-top: 80px;
+}
+
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 0;
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% transparency */
+    z-index: 1;
+    
+ }
+
+ .main-container > * {
+    position: relative;
+    z-index: 2;
+ }
+
+ .heading-dialogue{
+    position: absolute;
+    font-style: normal;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 50%;
+    font-size: 7vw;
+    letter-spacing: 0.09em;
+}
+.main-under-line{
+    box-sizing: border-box;
+    position: absolute;
+    width: 50vw;
+    height: 2vh;
+    margin-left: 70px;
+    margin-top: 260px;
+    background: #F24C4C;
+    box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.25);
+}
+.intro-para{
+    box-sizing: border-box;
+    position: absolute;
+    width: 50%;
+    left: 70px;
+    top: 300px;
+}
+
+.under-line{
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 5px;
+    background: #F24C4C;
+    margin:auto;
+    box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.25);
+}
+.link-heading{
+    margin-top: 50px;
+    text-align: center;
+}
+.about-us-info{
+    display:flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+.upper-line{
+    box-sizing: border-box;
+    position: absolute;
+    width: 400px;
+    height: 4px;
+    background: #F24C4C;
+    box-shadow: 3px 6px 18px rgba(0, 0, 0, 0.25);
+}
+.menu-card{
+    display: flex;
+    flex-direction: row;
+}
+.menu-img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.menu-title {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8a035;
+}
+
+.image-container{ 
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);
+    grid-gap: 10px;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+.gallery__item--2 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.gallery__item--4 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+.gallery__item--5 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.gallery__item--6 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}
+
+.loctaion-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+footer{
+    padding: 80px;
+}
+
+@media screen and (max-width:750px) {
+    .loctaion-container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .about-us-info{
+        display:flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .about-us-info-img{
+        height: 400px;
+        width:400px;
+        margin:auto;
+    }
+    .main-under-line{
+        margin-top: 180px;
+    }
+    .intro-para{
+        top:220px;
+    }
+    
+    
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+      display: block; 
+    }
+  
+    .navbar-link {
+      display: none;
+    }
+  
+    .nav-link.active {
+      display: flex; 
+    }
+}
+  
